@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>InternetGuard FAQ</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
+                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+                <a class="navbar-brand" href="#">InternetGuard</a>
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="home.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="privacy.html">Privacy</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="terms.html">Terms & Conditions</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+    <h1>InternetGuard - Frequently Asked Questions (FAQ)</h1>
+    <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+                    aria-expanded="true" aria-controls="collapseOne">
+                    How do I use InternetGuard?
+                </button>
+            </h2>
+            <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Enable the InternetGuard firewall using the switch in
+                            InternetGuard's action bar</li>
+                        <li class="list-group-item">Allow (greenish*) or deny (reddish*) Wi-Fi or mobile internet access
+                            using the icons next to an application name in InternetGuard's applications list</li>
+
+                    </ol>
+                    You can use Settings > Defaults to change from block/blacklist mode (disable Block Wi-Fi and Block
+                    mobile, and then block unwanted applications in InternetGuard's applications list) to
+                    allow/whitelist mode (enable Block Wi-Fi and Block mobile, and then allow desired applications in
+                    InternetGuard's applications list).
+                    <div class="fw-bold">* Depending on the theme you use, the icons may be:</div>
+                    <ol class="list-group list-group-numbered">
+                        <li class="list-group-item">Allowed (internet access permitted): greenish (teal) / blue / purple
+                            / gray</li>
+                        <li class="list-group-item">Blocked (internet access denied): reddish (salmon) / orange / yellow
+                            / amber</li>
+
+                    </ol>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Can InternetGuard completely protect my privacy?
+                </button>
+            </h2>
+            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>No - nothing can completely protect your privacy. InternetGuard will do its best, but it is
+                        limited by the fact it must use the Android VPN service. This is the trade-off required to make
+                        a firewall which does not require root access. The firewall can only start when Android "allows"
+                        it to start, so it will not offer protection during early boot-up (although you can disable your
+                        network before rebooting). Also, the Android VPN service needs to be restarted to apply new
+                        rules when connectivity has changed or when the screen is being turned on or off. It will,
+                        however, be much better than nothing.</p>
+                    <p>In the advanced options you can enable Seamless VPN handover on reload to prevent traffic from
+                        leaking when the Android VPN service is being restarted. However, this does not work properly on
+                        all Android versions/variants causing InternetGuard to hang and block all connections.</p>
+                    <p>On Android N and later InternetGuard can be configured as Always-On VPN. On Android O do not
+                        enable the sub option 'Block connections without VPN', see question 51) for more information on
+                        this.</p>
+                    <p>To protect yourself more, remember to disable Wi-Fi and mobile data before rebooting, and only
+                        enable them on reboot, after the firewall service has started (and the key icon is visible in
+                        the status bar).</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Can I use another VPN application while using InternetGuard
+                </button>
+            </h2>
+            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>If the VPN application is using the VPN service, then no, because InternetGuard needs to use this
+                        service. Android allows only one application at a time to use this service.</p>
+                    <p>InternetGuard is a firewall application, so there is no intention to add VPN support. However,
+                        InternetGuard supports a SOCKS5 proxy to chain VPN applications. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
