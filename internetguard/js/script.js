@@ -1,0 +1,1 @@
+$(function () { $("#main-menu").load("menu.html"); });
