@@ -92,6 +92,333 @@
                 </div>
             </div>
         </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading4">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                    Can I use InternetGuard on any Android version?
+                </button>
+            </h2>
+            <div id="collapse4" class="accordion-collapse collapse" aria-labelledby="heading4"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>No, the minimum required Android version is 5.1 (Lollipop)</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading5">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                    Will InternetGuard use extra battery power?
+                </button>
+            </h2>
+            <div id="collapse5" class="accordion-collapse collapse" aria-labelledby="heading5"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>By default InternetGuard will hardly use any battery power. All settings resulting in extra
+                        battery
+                        usage, like IP filtering and logging, have a warning. If InternetGuard uses a lot of battery
+                        power,
+                        please double check your settings.</p>
+                    <p></p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading6">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                    Will InternetGuard send my internet traffic to an external (VPN) server?
+                </button>
+            </h2>
+            <div id="collapse6" class="accordion-collapse collapse" aria-labelledby="heading6"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>No, depending on the mode of operation basically one of two things will happen with your internet
+                        traffic:</p>
+                    <p>
+                    <ul>
+                        <li>When IP filtering is disabled, blocked internet traffic will be routed into the local VPN
+                            service, which will operate as a sinkhole (in effect dropping all blocked traffic)</li>
+                        <li>When IP filtering is enabled, both blocked and allowed internet traffic will be routed into
+                            the local VPN service and only allowed traffic will be forwarded to the intended destination
+                            (and not to a VPN server)</li>
+                    </ul>
+                    </p>
+                    <p>The Android VPN service is being used to locally route all internet traffic to InternetGuard so
+                        no
+                        root is required to build this firewall application. InternetGuard, unlike all other no-root
+                        firewalls applications, is 100% open source, so when you are in doubt you can check the source
+                        code yourself.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading7">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                    Why are applications without internet permission shown?
+                </button>
+            </h2>
+            <div id="collapse7" class="accordion-collapse collapse" aria-labelledby="heading7"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Internet permission can be granted with each application update without user consent. By showing
+                        all applications, InternetGuard allows you to control internet access even before such an update
+                        occurs.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading8">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse8" aria-expanded="false" aria-controls="collapse8">
+                    What do I need to enable for the Google Play™ store app to work?
+                </button>
+            </h2>
+            <div id="collapse8" class="accordion-collapse collapse" aria-labelledby="heading8"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>You need 3 packages (applications) enabled (use search in InternetGuard to find them quickly):
+                    </p>
+                    <ul>
+                        <li>com.android.vending (Play store)</li>
+                        <li>com.google.android.gms (Play services)</li>
+                        <li>com.android.providers.downloads (Download manager)</li>
+                    </ul>
+                    <p>Since the Google Play™ store app has a tendency to check for updates or even download them all by
+                        itself (even if no account is associated), one can keep it in check by enabling "Allow when
+                        screen is on" for all 3 of these packages. Click on the down arrow on the left side of an
+                        application name and check that option, but leave the network icons set to red (hence blocked).
+                        The little human icon will appear for those packages.</p>
+                    <p>Note that InternetGuard does not require any Google service to be installed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading9">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse9" aria-expanded="false" aria-controls="collapse9">
+                    Why is the VPN service being restarted?
+                </button>
+            </h2>
+            <div id="collapse9" class="accordion-collapse collapse" aria-labelledby="heading9"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>The VPN service will be restarted when you turn the screen on or off and when connectivity
+                        changes (Wi-Fi, mobile) to apply the rules with the conditions 'Allow when screen is on' and
+                        'Block when roaming'.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading10">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse10" aria-expanded="false" aria-controls="collapse10">
+                    Will you provide a Tasker plug-in?
+                </button>
+            </h2>
+            <div id="collapse10" class="accordion-collapse collapse" aria-labelledby="heading10"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>No, because if Tasker is allowed to disable InternetGuard, any application can disable
+                        InternetGuard.
+                        Allowing a security application to be disabled by other applications is not a good idea.</p>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading11">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse11" aria-expanded="false" aria-controls="collapse11">
+                    How can I remove the ongoing InternetGuard entry in the notification screen?
+                </button>
+            </h2>
+            <div id="collapse11" class="accordion-collapse collapse" aria-labelledby="heading11"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>
+                    <ul>
+                        <li>Long click the InternetGuard notification</li>
+                        <li>Tap the 'i' icon</li>
+                        <li>Depending on your device and/or ROM manufacturer's software customizations, you can be
+                            directed to either:
+                            <ul>
+                                <li>the App Info screen and you can uncheck 'Show notifications' and agree to the next
+                                    dialog</li>
+                                <li>the App Notifications screen and you can toggle the 'Block' slider to on</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    </p>
+                    <p>Note that, whether or not you get a dialog warning to agree upon, this operation will also
+                        disable any information or warning notifications from InternetGuard, such as the new application
+                        installed notification.</p>
+                    <p>Some Android versions display an additional notification, which might include a key icon. This
+                        notification, unfortunately, cannot be removed.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading12">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse12" aria-expanded="false" aria-controls="collapse12">
+                    Why can't I select OK to approve the VPN connection request?
+                </button>
+            </h2>
+            <div id="collapse12" class="accordion-collapse collapse" aria-labelledby="heading12"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>There might be another (invisible) application on top of the VPN connection request dialog. Some
+                        known (screen dimming) applications which can cause this are Lux Brightness, Night Mode, and
+                        Twilight. To avoid this problem, at least temporarily, close all applications and/or services
+                        which may be running in the background.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading13">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse13" aria-expanded="false" aria-controls="collapse13">
+                    Why are some applications shown dimmed?
+                </button>
+            </h2>
+            <div id="collapse13" class="accordion-collapse collapse" aria-labelledby="heading13"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Disabled applications and applications without internet permission are shown dimmed.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading14">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse14" aria-expanded="false" aria-controls="collapse14">
+                    Why is InternetGuard using so much memory?
+                </button>
+            </h2>
+            <div id="collapse14" class="accordion-collapse collapse" aria-labelledby="heading14"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>It isn't. InternetGuard doesn't allocate any memory, except a little for displaying the user
+                        interface
+                        elements and for buffering traffic. It appears, on some Android variants, that the Google Play™
+                        store app connection uses almost 150 MB. It is needed for in-app donations, and is incorrectly
+                        attributed to InternetGuard instead to the Google Play™ store app.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading15">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse15" aria-expanded="false" aria-controls="collapse15">
+                    Why can't I find InternetGuard in the Google Play™ store app?
+                </button>
+            </h2>
+            <div id="collapse15" class="accordion-collapse collapse" aria-labelledby="heading15"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>InternetGuard requires at least Android 5.1, so it is not available in the Google Play™ store app
+                        on devices running prior Android versions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading16">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse16" aria-expanded="false" aria-controls="collapse16">
+                    Why does application XYZ still have internet access?
+                </button>
+            </h2>
+            <div id="collapse16" class="accordion-collapse collapse" aria-labelledby="heading16"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>If you block internet access for an application, there is no way around it. However, applications
+                        could access the internet through other (system) applications/components. For example, Google
+                        Play services receives incoming push messages and ads for most applications, including WhatsApp
+                        and Facebook messenger. You can prevent this by blocking internet access for the other
+                        application/component as well. You can block system applications and components, like Google
+                        Play services, by enabling the advanced NetGuard option Manage system apps. This can best be
+                        diagnosed by checking the global access log (three dot menu, Show log).</p>
+                    <p>Note that some applications keep trying to access the internet, which is done by sending a
+                        connection request packet. This packet goes into the VPN sinkhole when internet access for the
+                        application is blocked. This packet consists of less than 100 bytes and is counted by Android as
+                        outgoing traffic and will be visible in the speed graph notification as well.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading17">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse17" aria-expanded="false" aria-controls="collapse17">
+                    Can I Greenify/hibernate NetGuard?
+                </button>
+            </h2>
+            <div id="collapse17" class="accordion-collapse collapse" aria-labelledby="heading17"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>No. Greenifying or otherwise hibernating NetGuard will result in rules not being applied when
+                        connectivity changes from Wi-Fi/mobile, screen on/off, and roaming/not roaming.</p>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading18">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse18" aria-expanded="false" aria-controls="collapse18">
+                    Does doze mode affect NetGuard?
+                </button>
+            </h2>
+            <div id="collapse18" class="accordion-collapse collapse" aria-labelledby="heading18"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>I am not sure, because the doze mode documentation is not clear if the Android VPN service will
+                        be affected.
+
+                        To be sure, you can disable battery optimizations for NetGuard manually like this:</p>
+                    <code>Android settings > Battery > three dot menu > Battery optimizations > Dropdown > All apps > NetGuard > Don't optimize > Done</code>
+                    <p>The procedure to accomplish this can vary between devices.</p>
+                    <p>Disabling doze mode for NetGuard cannot be done from within NetGuard because, according to
+                        Google, NetGuard is not an application type allowed to do this.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+                    <h2 class="accordion-header" id="heading19">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                            Can I tether (use the Android hotspot) / use Wi-Fi calling while using InternetGuard?
+                        </button>
+                    </h2>
+                    <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                           <p>Yes, but you'll need to enable subnet routing and tethering in the NetGuard network settings. Whether or not it works depends on your Android version because some Android versions have a bug preventing tethering and the VPN service working together.</p>
+                           <p>Some devices hibernate Wi-Fi, preventing tethering from working when the screen is off. This behavior can be disabled in the Android enhanced/advanced Wi-Fi settings.</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
