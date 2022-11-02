@@ -402,20 +402,409 @@
             </div>
         </div>
         <div class="accordion-item">
-                    <h2 class="accordion-header" id="heading19">
-                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
-                            Can I tether (use the Android hotspot) / use Wi-Fi calling while using InternetGuard?
-                        </button>
-                    </h2>
-                    <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
-                        data-bs-parent="#accordionExample">
-                        <div class="accordion-body">
-                           <p>Yes, but you'll need to enable subnet routing and tethering in the NetGuard network settings. Whether or not it works depends on your Android version because some Android versions have a bug preventing tethering and the VPN service working together.</p>
-                           <p>Some devices hibernate Wi-Fi, preventing tethering from working when the screen is off. This behavior can be disabled in the Android enhanced/advanced Wi-Fi settings.</p>
-                        </div>
-                    </div>
+            <h2 class="accordion-header" id="heading19">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse19" aria-expanded="false" aria-controls="collapse19">
+                    Can I tether (use the Android hotspot) / use Wi-Fi calling while using InternetGuard?
+                </button>
+            </h2>
+            <div id="collapse19" class="accordion-collapse collapse" aria-labelledby="heading19"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Yes, but you'll need to enable subnet routing and tethering in the NetGuard network settings.
+                        Whether or not it works depends on your Android version because some Android versions have a bug
+                        preventing tethering and the VPN service working together.</p>
+                    <p>Some devices hibernate Wi-Fi, preventing tethering from working when the screen is off. This
+                        behavior can be disabled in the Android enhanced/advanced Wi-Fi settings.</p>
                 </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading20">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse20" aria-expanded="false" aria-controls="collapse20">
+                    Can you remove the notification from the status bar?
+                </button>
+            </h2>
+            <div id="collapse20" class="accordion-collapse collapse" aria-labelledby="heading20"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Android can kill background services at any time. This can only be prevented by turning a
+                        background service into a foreground service. Android requires an ongoing notification for all
+                        foreground services to make you aware of potential battery usage (see question 4). So, the
+                        notification cannot be removed without causing instability. However, the notification is being
+                        marked as low priority, which should result in moving it to the bottom of the list.</p>
+                    <p>The key icon and/or the VPN running notification, which is shown by Android and not by
+                        InternetGuard, unfortunately, cannot be removed. The Google documentation states: "A
+                        system-managed notification is shown during the lifetime of a VPN connection".</p>
+                    <p>Android 8 Oreo and later display a notification "... running in the background" listing all apps
+                        running in the background. You can't disable this notification, but you can remove the icon from
+                        the status bar like this:</p>
+                    <ul>
+                        <li>Open Settings > Apps & notifications > App info</li>
+                        <li>Open settings (three dots); Select "Show system"</li>
+                        <li>Select "Android System"</li>
+                        <li>Select "App notifications"</li>
+                        <li>Select "Apps running in background"</li>
+                        <li>Select "Importance" and select "Low"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading21">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse21" aria-expanded="false" aria-controls="collapse21">
+                    Can you add a 'Select All' function?
+                </button>
+            </h2>
+            <div id="collapse21" class="accordion-collapse collapse" aria-labelledby="heading21"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>There is no need for a 'Select All' function because you can switch from block (blacklist) to
+                        allow (whitelist) mode using Internetguard's settings. See also question 0.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading22">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                    How do I read the blocked traffic log?
+                </button>
+            </h2>
+            <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p><b>The columns have the following meanings:</b></p>
+                    <ul>
+                        <li>Time (tap on a log entry to see the date)</li>
+                        <li>Application icon (tap on a log entry to see the application name)</li>
+                        <li>Application UID</li>
+                        <li>Wi-Fi / mobile connection, green=allowed, red=blocked</li>
+                        <li>Interactive state (screen on or off)</li>
+                        <li>Protocol (see below) and packet flags (see below)</li>
+                        <li>Source and destination port (tap on a log entry to lookup a destination port)</li>
+                        <li>Source and destination IPv4 or IPv6 address (tap on a log entry to lookup a destination IP
+                            address)</li>
+                        <li>Organization name owning the IP address (needs to be enabled via the menu)</li>
+                    </ul>
+                    <p><b>Protocols:</b></p>
+                    <ul>
+                        <li>HOPO (IPv6 Hop-by-Hop Option)</li>
+                        <li>ICMP</li>
+                        <li>IGMP</li>
+                        <li>ESP (IPSec)</li>
+                        <li>TCP</li>
+                        <li>UDP</li>
+                        <li>Number = one of the protocols in this list</li>
+                        <li>4 = IPv4</li>
+                        <li>6 = IPv6</li>
+                    </ul>
+                    <p><b>Packet flags:</b></p>
+                    <ul>
+                        <li>S = SYN</li>
+                        <li>A = ACK</li>
+                        <li>P = PSH</li>
+                        <li>F = FIN</li>
+                        <li>R = RST</li>
+                    </ul>
+                    <p>Only TCP, UDP, and ICMP ping traffic can be routed through the Android VPN service. All other
+                        traffic will be dropped and will be shown as blocked in the global traffic log. This is almost
+                        never a problem on an Android device.</p>
+
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading22">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse22" aria-expanded="false" aria-controls="collapse22">
+                    Why is Google connectivity services allowed internet access by default?
+                </button>
+            </h2>
+            <div id="collapse22" class="accordion-collapse collapse" aria-labelledby="heading22"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>The Google connectivity services system application checks if the current network is really
+                        connected to the internet. This is probably accomplished by briefly connecting to some Google
+                        server.</p>
+                    <p>If this is not the case, there will be an '!' in the Wi-Fi or mobile icon in the system status
+                        bar.</p>
+                    <p>Recent Android versions seem not to switch connectivity from mobile to Wi-Fi when the Wi-Fi
+                        network is not really connected, even though there is a connection to the Wi-Fi network (or the
+                        other way around). On Android 6.0 and later you might get a notification asking you if you want
+                        to keep this connection on or not. To prevent a bad user experience, InternetGuard includes a
+                        predefined rule to default allow the Google connectivity services.</p>
+                    <p>You can find all predefined rules here.</p>
+
+                    <p>You can override predefined rules.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading23">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse23" aria-expanded="false" aria-controls="collapse23">
+                    Why do I get 'The item you requested is not available for purchase'?
+                </button>
+            </h2>
+            <div id="collapse23" class="accordion-collapse collapse" aria-labelledby="heading23"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>You can only purchase pro features when you have installed InternetGuard from the Google Play
+                        store.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading24">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse24" aria-expanded="false" aria-controls="collapse24">
+                    Why can some applications be configured as a group only?
+                </button>
+            </h2>
+            <div id="collapse24" class="accordion-collapse collapse" aria-labelledby="heading24"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>For many purposes, including network access, Android groups applications on UID and not on
+                        package/application name. Especially system applications often have the same UID, despite having
+                        a different package and application name; these are set up like this by the ROM manufacturer at
+                        build time. These applications can only be allowed/blocked access to the internet as a group.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading25">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse25" aria-expanded="false" aria-controls="collapse25">
+                    Why is the battery/network usage of InternetGuard so high?
+                </button>
+            </h2>
+            <div id="collapse25" class="accordion-collapse collapse" aria-labelledby="heading25"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>This is because Android counts battery and network usage which is normally counted for other
+                        applications against InternetGuard in IP filtering mode. The total battery usage is slightly
+                        higher when IP filtering mode is enabled. IP filtering mode is always enabled on Android
+                        versions prior to 5.0, and optionally enabled on later Android versions.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading26">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse26" aria-expanded="false" aria-controls="collapse26">
+                    Why does the VPN not start?
+                </button>
+            </h2>
+            <div id="collapse26" class="accordion-collapse collapse" aria-labelledby="heading26"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>InternetGuard "asks" Android to start the local VPN service, but some Android versions contain a
+                        bug which prevents the VPN from starting (automatically). Sometimes this is caused by updating
+                        InternetGuard. Unfortunately this cannot be fixed by InternetGuard. You can try to restart your
+                        device and/or revoke the VPN permissions from InternetGuard using the Android settings.
+                        Sometimes it helps to uninstall and install InternetGuard again (be sure to export your settings
+                        first!).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading27">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse27" aria-expanded="false" aria-controls="collapse27">
+                    Why did InternetGuard stop running?
+                </button>
+            </h2>
+            <div id="collapse27" class="accordion-collapse collapse" aria-labelledby="heading27"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>On most devices, InternetGuard will keep running in the background with its foreground service.
+                        On some devices (in particular some Samsung models), where there are lots of applications
+                        competing for memory, Android may still stop InternetGuard as a last resort. Unfortunately this
+                        cannot be fixed by InternetGuard, and can be considered a shortcoming of the device and/or as a
+                        bug in Android. You can workaround this problem by enabling the watchdog in the InternetGuard
+                        advanced options to check every 10-15 minutes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading28">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse28" aria-expanded="false" aria-controls="collapse28">
+                    Why is permission ... needed?
+                </button>
+            </h2>
+            <div id="collapse28" class="accordion-collapse collapse" aria-labelledby="heading28"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>
+                    <ul>
+                        <li>INTERNET ('Full network access'): to forward allowed (filtered) traffic to the internet</li>
+                        <li>ACCESS_NETWORK_STATE ('View network connections'): to check if the device is connected to
+                            the internet through Wi-Fi</li>
+                        <li>READ_PHONE_STATE ('Device ID & call information'): to detect mobile network changes, see
+                            here for more details</li>
+                        <li>ACCESS_WIFI_STATE ('Wi-Fi connection information'): to detect Wi-Fi network changes</li>
+                        <li>RECEIVE_BOOT_COMPLETED ('Run at startup'): to start the firewall when booting the device
+                        </li>
+                        <li>WAKE_LOCK ('Prevent device from sleeping'): to reliably reload rules in the background on
+                            connectivity changes</li>
+                        <li>READ/WRITE_EXTERNAL_STORAGE ('Photos/Media/Files'): to export/import settings on Android
+                            versions before 4.4 (KitKat) (there is no need to grant this permission on later Android
+                            versions)</li>
+                        <li>VIBRATE: to provide vibration feedback on widget tap</li>
+                        <li>BILLING: to use in-app billing</li>
+                    </ul>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading29">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse29" aria-expanded="false" aria-controls="collapse29">
+                    Does InternetGuard handle incoming connections?
+                </button>
+            </h2>
+            <div id="collapse29" class="accordion-collapse collapse" aria-labelledby="heading29"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>The Android VPN service handles outgoing connections only (from applications to the internet), so
+                        incoming connections are normally left alone.</p>
+                    <p>If you want to run a server application on Android, then be aware that using port numbers below
+                        1024 require root permissions and that some Android versions contain routing bugs, causing
+                        inbound traffic incorrectly being routed into the VPN.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading30">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse30" aria-expanded="false" aria-controls="collapse30">
+                    Can I get a refund?
+                </button>
+            </h2>
+            <div id="collapse30" class="accordion-collapse collapse" aria-labelledby="heading30"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>If a purchased pro feature doesn't work as described and this isn't caused by a problem in the
+                        free features and I cannot fix the problem in a timely manner, you can get a refund. In all
+                        other cases there is no refund possible. In no circumstances there is a refund possible for any
+                        problem related to the free features, since there wasn't paid anything for them and because they
+                        can be evaluated without any limitation. I take my responsibility as seller to deliver what has
+                        been promised and I expect that you take responsibility for informing yourself of what you are
+                        buying.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading31">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse31" aria-expanded="false" aria-controls="collapse31">
+                    Why are there in-application advertisements?
+                </button>
+            </h2>
+            <div id="collapse31" class="accordion-collapse collapse" aria-labelledby="heading31"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Developing InternetGuard was quite a challenge and really a lot of work, but fun to do. A good
+                        product deserves good support, which means, in practice, that I am spending 30-60 minutes each
+                        and every day answering questions and solving problems. Just about 1 in 1000 downloaders
+                        purchase any of the pro features, so support is basically one way. This is not maintainable in
+                        the long run and this is why advertisements were added. Purchasing any of the pro features will
+                        completely disable advertisements and help keep the project going.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading32">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse32" aria-expanded="false" aria-controls="collapse32">
+                    Does InternetGuard encrypt my internet traffic / hide my IP address?
+                </button>
+            </h2>
+            <div id="collapse32" class="accordion-collapse collapse" aria-labelledby="heading32"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>InternetGuard is a firewall application that filters internet traffic on your device (see also
+                        this question), so it is not meant to - and does not - encrypt your internet traffic or hide
+                        your IP address.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading33">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse33" aria-expanded="false" aria-controls="collapse33">
+                    Will InternetGuard automatically start on boot?
+                </button>
+            </h2>
+            <div id="collapse33" class="accordion-collapse collapse" aria-labelledby="heading33"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Yes, InternetGuard will automatically be started on boot if you powered off your device with
+                        InternetGuard enabled and InternetGuard is not installed on external storage.</p>
+                    <p>Some devices, for example OnePlus and Mi devices, can prevent certain apps from auto-starting
+                        after reboot. This can be disabled in the Android settings.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading34">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse34" aria-expanded="false" aria-controls="collapse34">
+                    Why does InternetGuard block all internet traffic?!
+                </button>
+            </h2>
+            <div id="collapse34" class="accordion-collapse collapse" aria-labelledby="heading34"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Make sure you have put InternetGuard on the doze exception list (Android 6 Marshmallow or later)
+                        and that Android allows InternetGuard to use the internet in the background (see also this
+                        question).</p>
+                    <p>Make sure you are not running InternetGuard in allow (whitelist) mode (check the InternetGuard
+                        default settings).</p>
+                    <p>Make sure you didn't enable the Always-On VPN setting 'Block connections without VPN' (Android 8
+                        Oreo or later). This will block resolving domain names too (is it a bug or feature?).</p>
+                    <p>Some Android versions contain a bug resulting in all internet traffic being blocked. Mostly, you
+                        can workaround this bug by enabling filtering in InternetGuard's Advanced options.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="accordion-item">
+            <h2 class="accordion-header" id="heading35">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#collapse35" aria-expanded="false" aria-controls="collapse35">
+                    Why does InternetGuard use so much data?
+                </button>
+            </h2>
+            <div id="collapse35" class="accordion-collapse collapse" aria-labelledby="heading35"
+                data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                    <p>Basically, InternetGuard doesn't use data itself. However, many Android versions incorrectly
+                        account data of other applications flowing through InternetGuard to InternetGuard instead of to
+                        the applications. The data usage of other applications will be zero with InternetGuard enabled
+                        in this case.</p>
+                    <p>The total data usage of your device will be the same with and without InternetGuard.</p>
+                </div>
+            </div>
+        </div>
 
 
 
