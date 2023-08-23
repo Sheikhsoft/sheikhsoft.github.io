@@ -1,119 +1,544 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+
+<meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
 
 <head>
     <meta charset="utf-8">
+    <title>SheikhSoft | Software Dev Agency</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SheikhSoft - Software Dev Agency">
+    <meta name="keywords"
+      content=" creative agency, mobile app showcasesoftware">
+    <meta name="author" content="SheikhSoft">
+
+    <!-- Viewport -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Privacy Policy- </title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
+        }
+
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                preloader.classList.remove('active');
+                setTimeout(function () {
+                    preloader.remove();
+                }, 1000);
+            };
+        })();
+    </script>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'http://www.googletagmanager.com/gtm5445.html?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-WKV3GT5');
+    </script>
 </head>
 
+
+<!-- Body -->
+
 <body>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01"
-                aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#">Sheikhsoft</a>
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="internetguard/home.html">InternetGuard</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="privacy-policy.html">Privacy
-                            Policy</a>
-                    </li>
 
+    <!-- Google Tag Manager (noscript)-->
+    <noscript>
+        <iframe src="http://www.googletagmanager.com/ns.html?id=GTM-WKV3GT5" height="0" width="0"
+            style="display: none; visibility: hidden;"></iframe>
+    </noscript>
 
-                </ul>
-                <form class="d-flex" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Search</button>
-                </form>
-            </div>
-        </div>
-    </nav>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <h1>Privacy Policy</h1>
-                <p>This Privacy Policy is brought by Sheikh Soft. Sheikh Soft is the sole owner of a number of demo
-                    websites and apps. This Privacy Policy shall apply to all Sheikh Soft
-                    sites
-                    where this Privacy Policy is featured. This Privacy Policy describes how the Sheikh Soft collects,
-                    uses,
-                    shares and secures personal information that you provide.</p>
-                <p>Sheikh Soft does not share personal information of any kind with anyone. We will not sell or rent
-                    your name or
-                    personal information to any third party. We do not sell, rent or provide outside access to our
-                    mailing list or
-                    any data we store. Any data that a user stores via our facilities is wholly owned by that user or
-                    business. At
-                    any time, a user or business is free to take their data and leave, or to simply delete their data
-                    from our
-                    facilities.</p>
-                <p>Sheikh Soft only collects specific personal information that is necessary for you to access and use
-                    our
-                    services. This personal information includes, but is not limited to, first and last name, email
-                    address, Country
-                    of residence.</p>
-                <p>Sheikh Soft may release personal information if Sheikh Soft is required to by law, search warrant,
-                    subpoena,
-                    court order or fraud investigation. We may also use personal information in a manner that does not
-                    identify you
-                    specifically nor allow you to be contacted but does identify certain criteria about our site’s users
-                    in general
-                    (such as we may inform third parties about the number of registered users, number of unique
-                    visitors, and the
-                    pages most frequently browsed).</p>
-                <h3>Use of Information</h3>
-                <p>We use the information to enable your use of the site and its features and to assure security of use
-                    and prevent
-                    any potential abuse. We may use the information that we collect for a variety of purposes including:
-                </p>
-                <p><b>Promotion</b> — With your consent we send promotional communications, such as providing you with
-                    information
-                    about products and services, features, surveys, newsletters, offers, promotions, contests and
-                    events;</p>
-                <p><b>Safety and security</b> — We use the information we have to verify accounts and activities, combat
-                    harmful
-                    conduct, detect and prevent spam and other bad experiences, maintain the integrity of the Platform,
-                    and promote
-                    safety and security.</p>
-                <p><b>Product research and development</b> — We use the information we have to develop, test and improve
-                    our
-                    Platform and Services, by conducting surveys and research, and testing and troubleshooting new
-                    products and
-                    features.</p>
-                <p><b>Communication with you</b> — We use the information we have to send you various communications,
-                    communicate
-                    with you about our products, and let you know about our policies and terms. We also use your
-                    information to
-                    respond to you when you contact us.</p>
-                <h3>Amendments</h3>
-                <p>We may amend this Privacy Policy from time to time. When we amend this Privacy Policy, we will update
-                    this page
-                    accordingly and require you to accept the amendments in order to be permitted to continue using our
-                    services.
-                </p>
-                <h3>Contact Us</h3>
-                <p>You can learn more about how privacy works within our site by contacting us. If you have questions
-                    about this
-                    Policy, you can contact us via email address provided. Additionally, we may also resolve any
-                    disputes you have
-                    with us in connection with our privacy policies and practices through direct contact. Write to us at
-                    sheikhsoft.com@gmail.com</p>
-            </div>
-
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
         </div>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
-        crossorigin="anonymous"></script>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper position-relative zindex-2">
+
+
+        <header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top">
+            <div class="container px-3">
+              <a href="index.html" class="navbar-brand pe-3">
+                <img src="assets/img/logo_small.png" width="47" alt="Sheikhsoft">
+                SheikhSoft
+              </a>
+              <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+                <div class="offcanvas-header border-bottom border-light">
+                  <h5 class="offcanvas-title text-white">Menu</h5>
+                  <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item dropdown">
+                      <a href="index.html" class="nav-link" aria-current="page">Home</a>
+      
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Apps</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a href="internetguard/" class="dropdown-item" target="_blank">InternetGuard FireWall</a></li>
+                          <li><a href="#" class="dropdown-item">BetterHalf Matrimony</a></li>
+        
+                        </ul>
+                      </li>
+      
+                    <li class="nav-item">
+                      <a href="services.html" class="nav-link">Services</a>
+                    </li>
+      
+                    <li class="nav-item">
+                      <a href="about.html" class="nav-link">about</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Document</a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                          <li><a href="#" class="dropdown-item">InternetGuard FireWall</a></li>
+                          <li><a href="better-half-docs/" class="dropdown-item" target="_blank">BetterHalf Matrimony</a></li>
+        
+                        </ul>
+                      </li>
+                    <li class="nav-item">
+                      <a href="contacts.html" class="nav-link">Contact Us</a>
+                    </li>
+                  </ul>
+                </div>
+      
+              </div>
+              <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                <input type="checkbox" class="form-check-input" id="theme-mode">
+                <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+              </div>
+              <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+      
+            </div>
+          </header>
+
+        <div class="bg-secondary pt-5" style="padding-bottom: 228px;">
+
+            <!-- Breadcrumb -->
+            <nav class="container pt-5 pb-4 mb-lg-2" aria-label="breadcrumb">
+                <ol class="breadcrumb pt-lg-3 mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Privacy Policy</li>
+                </ol>
+            </nav>
+
+
+            <!-- Page title + Services grid -->
+            <section class="container pb-2 pb-md-4 pb-lg-5 mb-3">
+                <h1 class="pb-4">Privacy Policy</h1>
+                <div class="row row-cols-1 row-cols-md-1">
+
+                    <p>This Privacy Policy is brought by Sheikh Soft. Sheikh Soft is the sole owner of a number of demo
+                        websites and apps. This Privacy Policy shall apply to all Sheikh Soft
+                        sites
+                        where this Privacy Policy is featured. This Privacy Policy describes how the Sheikh Soft
+                        collects,
+                        uses,
+                        shares and secures personal information that you provide.</p>
+                    <p>Sheikh Soft does not share personal information of any kind with anyone. We will not sell or rent
+                        your name or
+                        personal information to any third party. We do not sell, rent or provide outside access to our
+                        mailing list or
+                        any data we store. Any data that a user stores via our facilities is wholly owned by that user
+                        or
+                        business. At
+                        any time, a user or business is free to take their data and leave, or to simply delete their
+                        data
+                        from our
+                        facilities.</p>
+                    <p>Sheikh Soft only collects specific personal information that is necessary for you to access and
+                        use
+                        our
+                        services. This personal information includes, but is not limited to, first and last name, email
+                        address, Country
+                        of residence.</p>
+                    <p>Sheikh Soft may release personal information if Sheikh Soft is required to by law, search
+                        warrant,
+                        subpoena,
+                        court order or fraud investigation. We may also use personal information in a manner that does
+                        not
+                        identify you
+                        specifically nor allow you to be contacted but does identify certain criteria about our site’s
+                        users
+                        in general
+                        (such as we may inform third parties about the number of registered users, number of unique
+                        visitors, and the
+                        pages most frequently browsed).</p>
+                    <h3>Use of Information</h3>
+                    <p>We use the information to enable your use of the site and its features and to assure security of
+                        use
+                        and prevent
+                        any potential abuse. We may use the information that we collect for a variety of purposes
+                        including:
+                    </p>
+                    <p><b>Promotion</b> — With your consent we send promotional communications, such as providing you
+                        with
+                        information
+                        about products and services, features, surveys, newsletters, offers, promotions, contests and
+                        events;</p>
+                    <p><b>Safety and security</b> — We use the information we have to verify accounts and activities,
+                        combat
+                        harmful
+                        conduct, detect and prevent spam and other bad experiences, maintain the integrity of the
+                        Platform,
+                        and promote
+                        safety and security.</p>
+                    <p><b>Product research and development</b> — We use the information we have to develop, test and
+                        improve
+                        our
+                        Platform and Services, by conducting surveys and research, and testing and troubleshooting new
+                        products and
+                        features.</p>
+                    <p><b>Communication with you</b> — We use the information we have to send you various
+                        communications,
+                        communicate
+                        with you about our products, and let you know about our policies and terms. We also use your
+                        information to
+                        respond to you when you contact us.</p>
+                    <h3>Amendments</h3>
+                    <p>We may amend this Privacy Policy from time to time. When we amend this Privacy Policy, we will
+                        update
+                        this page
+                        accordingly and require you to accept the amendments in order to be permitted to continue using
+                        our
+                        services.
+                    </p>
+                    <h3>Contact Us</h3>
+                    <p>You can learn more about how privacy works within our site by contacting us. If you have
+                        questions
+                        about this
+                        Policy, you can contact us via email address provided. Additionally, we may also resolve any
+                        disputes you have
+                        with us in connection with our privacy policies and practices through direct contact. Write to
+                        us at
+                        sheikhsoft.com@gmail.com</p>
+
+
+
+                </div>
+            </section>
+        </div>
+
+
+
+
+
+        <!-- Contact form -->
+        <section class="container">
+            <div class="bg-secondary rounded-3 py-5 px-3 px-sm-4 px-lg-0">
+                <div class="row align-items-center pt-1 pb-2 py-lg-4">
+                    <div class="col-xl-4 col-lg-5 col-md-6 offset-lg-1 mb-4 pb-3 mb-md-0 pb-md-0">
+                        <h2 class="h1 mb-lg-4">Get in Touch</h2>
+                        <p class="pb-2 pb-md-4 pb-lg-5">Have a project in mind? To request a quote contact us directly
+                            or fill out the form and let us know how we can help.</p>
+                        <h3 class="mb-lg-4">Contact Info</h3>
+                        <ul class="list-unstyled pb-3 pb-md-4 pb-lg-5 mb-2">
+                            <li class="mb-2">
+                                <a href="tel:4065550120" class="nav-link d-flex align-items-center p-0">
+                                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                                    (406) 555-0120
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="mailto:example@email.com" class="nav-link d-flex align-items-center p-0">
+                                    <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                                    example@email.com
+                                </a>
+                            </li>
+                            <li class="mb-2">
+                                <a href="#" class="nav-link d-flex align-items-center p-0">
+                                    <i class="bx bx-map fs-xl text-primary me-2"></i>
+                                    2464 Royal Ln. Mesa,New Jersey 45463
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="d-flex">
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-facebook me-3">
+                                <i class="bx bxl-facebook"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-twitter me-3">
+                                <i class="bx bxl-twitter"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-linkedin me-3">
+                                <i class="bx bxl-linkedin"></i>
+                            </a>
+                            <a href="#" class="btn btn-icon btn-outline-secondary btn-instagram">
+                                <i class="bx bxl-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-lg-5 col-md-6 offset-xl-1">
+                        <div class="card border-0 shadow-sm p-sm-2">
+                            <form class="card-body needs-validation" novalidate>
+                                <div class="mb-4">
+                                    <label for="service" class="form-label fs-base">Service</label>
+                                    <select id="service" class="form-select form-select-lg" required>
+                                        <option value="" selected disabled>Choose the service you are interested in
+                                        </option>
+                                        <option value="Custom Software Development">Custom Software Development</option>
+                                        <option value="Software Integration">Software Integration</option>
+                                        <option value="Mobile App Development">Mobile App Development</option>
+                                        <option value="Business Analytics">Business Analytics</option>
+                                        <option value="Software Testing">Software Testing</option>
+                                        <option value="Project Management">Project Management</option>
+                                    </select>
+                                    <div class="invalid-feedback">Please choose the service!</div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="name" class="form-label fs-base">Full name</label>
+                                    <input type="text" id="name" class="form-control form-control-lg" required>
+                                    <div class="invalid-feedback">Please enter your name!</div>
+                                </div>
+                                <div class="mb-4">
+                                    <label for="email" class="form-label fs-base">Email address</label>
+                                    <input type="email" id="email" class="form-control form-control-lg" required>
+                                    <div class="invalid-feedback">Please provide a valid email address!</div>
+                                </div>
+                                <div class="mb-4 pb-2">
+                                    <label for="message" class="form-label fs-base">Email address</label>
+                                    <textarea id="message" class="form-control form-control-lg" rows="3"
+                                        placeholder="Tell us about your project" required></textarea>
+                                    <div class="invalid-feedback">Please enter you message!</div>
+                                </div>
+                                <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send
+                                    request</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5" style="margin-top: -150px;">
+        <div style="height: 158px;"></div>
+        <div class="container pt-lg-4">
+            <div class="row pb-5">
+              <div class="col-lg-4 col-md-6">
+                <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                  <img src="assets/img/logo_small.png" width="47" alt="SheikhSoft">
+                  SheikhSoft Inc.
+                </div>
+                <p class="fs-sm pb-lg-3 mb-4">Proin ipsum pharetra, senectus eget scelerisque varius pretium platea velit.
+                  Lacus, eget eu vitae nullam proin turpis etiam mi sit. Non feugiat feugiat egestas nulla nec. Arcu tempus,
+                  eget elementum dolor ullamcorper sodales ultrices eros.</p>
+                <form class="needs-validation" novalidate>
+                  <label for="subscr-email" class="form-label">Subscribe to our newsletter</label>
+                  <div class="input-group">
+                    <input type="email" id="subscr-email" class="form-control rounded-start ps-5" placeholder="Your email"
+                      required>
+                    <i
+                      class="bx bx-envelope fs-lg text-muted position-absolute top-50 start-0 translate-middle-y ms-3 zindex-5"></i>
+                    <div class="invalid-tooltip position-absolute top-100 start-0">Please provide a valid email address.</div>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                  </div>
+                </form>
+              </div>
+              <div class="col-xl-6 col-lg-7 col-md-5 offset-xl-2 offset-md-1 pt-4 pt-md-1 pt-lg-0">
+                <div id="footer-links" class="row">
+                  <div class="col-lg-4">
+                    <h6 class="mb-2">
+                      <a href="#useful-links" class="d-block text-dark dropdown-toggle d-lg-none py-2"
+                        data-bs-toggle="collapse">Useful Links</a>
+                    </h6>
+                    <div id="useful-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                      <ul class="nav flex-column pb-lg-1 mb-lg-3">
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Home</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Services</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Case Studies</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Careers</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Blog</a></li>
+                      </ul>
+                      <ul class="nav flex-column mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Terms &amp;
+                            Conditions</a></li>
+                        <li class="nav-item"><a href="privacy-policy.html"
+                            class="nav-link d-inline-block px-0 pt-1 pb-2">Privacy Policy</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-3">
+                    <h6 class="mb-2">
+                      <a href="#social-links" class="d-block text-dark dropdown-toggle d-lg-none py-2"
+                        data-bs-toggle="collapse">Socials</a>
+                    </h6>
+                    <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
+                      <ul class="nav flex-column mb-2 mb-lg-0">
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
+                    <h6 class="mb-2">Contact Us</h6>
+                    <a href="mailto:email@example.com" class="fw-medium">sheikhsoft.com@gmail.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <p class="nav d-block fs-xs text-center text-md-start pb-2 pb-lg-0 mb-0">
+              <span class="text-muted">&copy; All rights reserved. Made by </span>
+              <a class="nav-link d-inline-block p-0 opacity-80" href="https://sheikhsoft.com/" target="_blank"
+                rel="noopener">SheikhSoft inc</a>
+            </p>
+          </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
 </body>
 
 </html>
