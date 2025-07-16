@@ -616,48 +616,41 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-lg-8 col-md-10">
-            <form class="row needs-validation" novalidate>
+            <form id="appoint-form" class="row needs-validation" action="https://formspree.io/f/mgvzepwe" method="POST"
+              novalidate>
               <div class="col-sm-6 mb-4">
                 <label for="fn" class="form-label">First name</label>
-                <input type="text" id="fn" class="form-control" required>
+                <input type="text" id="fn" class="form-control" name="firstName" required>
                 <div class="invalid-feedback">Please, enter your first name!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="ln" class="form-label">Last name</label>
-                <input type="text" id="ln" class="form-control" required>
+                <input type="text" id="ln" class="form-control" name="lastName" required>
                 <div class="invalid-feedback">Please, enter your last name!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="email" class="form-label">Email address</label>
-                <input type="email" id="email" class="form-control" required>
+                <input type="email" id="email" class="form-control" name="email" required>
                 <div class="invalid-feedback">Please, provide a valid email address!</div>
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="phone" class="form-label">Phone</label>
-                <input type="text" id="phone" class="form-control"
+                <input type="text" id="phone" class="form-control" name="phone"
                   data-format='{"numericOnly": true, "delimiters": ["+1 ", " ", " "], "blocks": [0, 3, 3, 2]}'
                   placeholder="+1 ___ ___ __">
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="city" class="form-label">City</label>
-                <select id="city" class="form-select" required>
-                  <option value="" disabled selected>Choose city</option>
-                  <option value="Boston">Boston</option>
-                  <option value="Chicago">Chicago</option>
-                  <option value="Los Angeles">Los Angeles</option>
-                  <option value="Miami">Miami</option>
-                  <option value="New York">New York</option>
-                  <option value="Philadelphia">Philadelphia</option>
-                </select>
-                <div class="invalid-feedback">Please, choose your city!</div>
+                <input type="text" id="city" class="form-control" name="city" required>
+                <div class="invalid-feedback">Please, enter you city!</div>
               </div>
               <div class="col-sm-6 mb-4">
-                <label for="company" class="form-label">Your company</label>
+                <label for="company" class="form-label" name="company">Your company</label>
                 <input type="text" id="company" class="form-control">
               </div>
               <div class="col-sm-6 mb-4">
                 <label for="position" class="form-label">Your position</label>
-                <select id="position" class="form-select">
+                <select id="position" class="form-select" name="position">
                   <option value="Owner">Owner</option>
                   <option value="CEO">CEO</option>
                   <option value="Manager">Manager</option>
@@ -675,12 +668,13 @@
               </div>
               <div class="col-12 mb-4">
                 <label for="message" class="form-label">Message</label>
-                <textarea id="message" class="form-control" rows="4" required></textarea>
+                <textarea id="message" class="form-control" rows="4" name="message" required></textarea>
                 <div class="invalid-feedback">Please, enter your message!</div>
               </div>
               <div class="col-12 text-center pt-2 pt-md-3 pt-lg-4">
                 <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send a request</button>
               </div>
+              <p id="my-form-status"></p>
             </form>
           </div>
         </div>
@@ -783,6 +777,40 @@
     <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
     <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
   </a>
+
+  <!-- Place this script at the end of the body tag -->
+  <script>
+    var form = document.getElementById("appoint-form");
+
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 
 
   <!-- Vendor Scripts -->
