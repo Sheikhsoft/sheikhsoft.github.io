@@ -297,45 +297,30 @@
               <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
               <div class="card-body position-relative zindex-2">
                 <h2 class="card-title pb-3 mb-4">Get Online Consultation</h2>
-                <form class="row g-4 needs-validation" novalidate>
+                <form class="row g-4 needs-validation" id="contact-form" action="https://formspree.io/f/mwpqkrdo"
+                  method="POST">
                   <div class="col-12">
                     <label for="fn" class="form-label fs-base">Full name</label>
-                    <input type="text" class="form-control form-control-lg" id="fn" required>
+                    <input type="text" class="form-control form-control-lg" id="fn" name="fullname" required>
                     <div class="invalid-feedback">Please enter your full name!</div>
                   </div>
                   <div class="col-12">
                     <label for="email" class="form-label fs-base">Email address</label>
-                    <input type="email" class="form-control form-control-lg" id="email" required>
+                    <input type="email" class="form-control form-control-lg" id="email" name="email" required>
                     <div class="invalid-feedback">Please provid a valid email address!</div>
                   </div>
-                  <div class="col-12">
-                    <label for="specialist" class="form-label fs-base">Specialist</label>
-                    <select class="form-select form-select-lg" id="specialist" required>
-                      <option value="" selected disabled>Choose a specialist</option>
-                      <option value="Therapist">Therapist</option>
-                      <option value="Dentist">Dentist</option>
-                      <option value="Cardiologist">Cardiologist</option>
-                      <option value="Pediatrician">Pediatrician</option>
-                      <option value="Gynecologist">Gynecologist</option>
-                      <option value="Surgeon">Surgeon</option>
-                    </select>
-                    <div class="invalid-feedback">Choose a specialist from the list!</div>
-                  </div>
+
                   <div class="col-sm-6">
-                    <label for="date" class="form-label fs-base">Date</label>
-                    <input type="text" class="form-control form-control-lg" id="date"
-                      data-format='{"date": true, "datePattern": ["m", "d"]}' placeholder="mm/dd" required>
-                    <div class="invalid-feedback">Enter a date!</div>
+                    <label for="date" class="form-label fs-base">Message</label>
+                    <textarea type="text" class="form-control form-control-lg" id="message" name="message"
+                      placeholder="mm/dd" required>
+                    <div class="invalid-feedback">Enter a Message!</div>
                   </div>
-                  <div class="col-sm-6">
-                    <label for="time" class="form-label fs-base">Time</label>
-                    <input type="text" class="form-control form-control-lg" id="time"
-                      data-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" required>
-                    <div class="invalid-feedback">Enter a time!</div>
-                  </div>
+                  
                   <div class="col-12 pt-2 pt-sm-3">
                     <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Make an appointment</button>
                   </div>
+                  <p id="my-form-status"></p>
                 </form>
               </div>
             </div>
@@ -479,6 +464,40 @@
     <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
     <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
   </a>
+
+  <!-- Place this script at the end of the body tag -->
+<script>
+  var form = document.getElementById("contact-form");
+
+  async function handleSubmit(event) {
+    event.preventDefault();
+    var status = document.getElementById("my-form-status");
+    var data = new FormData(event.target);
+    fetch(event.target.action, {
+      method: form.method,
+      body: data,
+      headers: {
+        'Accept': 'application/json'
+      }
+    }).then(response => {
+      if (response.ok) {
+        status.innerHTML = "Thanks for your submission!";
+        form.reset()
+      } else {
+        response.json().then(data => {
+          if (Object.hasOwn(data, 'errors')) {
+            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+          } else {
+            status.innerHTML = "Oops! There was a problem submitting your form"
+          }
+        })
+      }
+    }).catch(error => {
+      status.innerHTML = "Oops! There was a problem submitting your form"
+    });
+  }
+  form.addEventListener("submit", handleSubmit)
+</script>
 
 
   <!-- Vendor Scripts -->
