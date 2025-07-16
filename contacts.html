@@ -310,13 +310,12 @@
                     <div class="invalid-feedback">Please provid a valid email address!</div>
                   </div>
 
-                  <div class="col-sm-6">
-                    <label for="date" class="form-label fs-base">Message</label>
-                    <textarea type="text" class="form-control form-control-lg" id="message" name="message"
-                      placeholder="mm/dd" required>
-                    <div class="invalid-feedback">Enter a Message!</div>
+                  <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea id="message" class="form-control" rows="4" name="message" required></textarea>
+                    <div class="invalid-feedback">Please, enter your message!</div>
                   </div>
-                  
+
                   <div class="col-12 pt-2 pt-sm-3">
                     <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Make an appointment</button>
                   </div>
@@ -466,38 +465,38 @@
   </a>
 
   <!-- Place this script at the end of the body tag -->
-<script>
-  var form = document.getElementById("contact-form");
+  <script>
+    var form = document.getElementById("contact-form");
 
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("my-form-status");
-    var data = new FormData(event.target);
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-        'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Thanks for your submission!";
-        form.reset()
-      } else {
-        response.json().then(data => {
-          if (Object.hasOwn(data, 'errors')) {
-            status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
-          } else {
-            status.innerHTML = "Oops! There was a problem submitting your form"
-          }
-        })
-      }
-    }).catch(error => {
-      status.innerHTML = "Oops! There was a problem submitting your form"
-    });
-  }
-  form.addEventListener("submit", handleSubmit)
-</script>
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("my-form-status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+          'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+            } else {
+              status.innerHTML = "Oops! There was a problem submitting your form"
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = "Oops! There was a problem submitting your form"
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+  </script>
 
 
   <!-- Vendor Scripts -->
