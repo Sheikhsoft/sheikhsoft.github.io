@@ -120,6 +120,35 @@
       }
     }
   </style>
+  <style>
+    /* Basic styling for our custom dialog */
+    .dialog {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      left: 50%;
+      top: 20%;
+      transform: translateX(-50%);
+      padding: 20px 40px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      background-color: #f9f9f9;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1000;
+    }
+
+    .dialog.success {
+      background-color: #d4edda;
+      color: #155724;
+      border-color: #c3e6cb;
+    }
+
+    .dialog.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border-color: #f5c6cb;
+    }
+  </style>
 
   <!-- Theme mode -->
   <script>
@@ -676,6 +705,7 @@
               </div>
               <p id="my-form-status"></p>
             </form>
+            <div id="responseDialog" class="dialog"></div>
           </div>
         </div>
       </div>
@@ -749,10 +779,10 @@
               </h6>
               <div id="social-links" class="collapse d-lg-block" data-bs-parent="#footer-links">
                 <ul class="nav flex-column mb-2 mb-lg-0">
-                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
-                  <li class="nav-item"><a href="#" class="nav-link d-inline-block px-0 pt-1 pb-2">Instagram</a></li>
+                    <li class="nav-item"><a href="https://www.facebook.com/sheikhsoft" class="nav-link d-inline-block px-0 pt-1 pb-2">Facebook</a></li>
+                  <li class="nav-item"><a href="https://www.linkedin.com/company/18040660" class="nav-link d-inline-block px-0 pt-1 pb-2">LinkedIn</a></li>
+                  <li class="nav-item"><a href="https://x.com/sheikhsoft" class="nav-link d-inline-block px-0 pt-1 pb-2">Twitter</a></li>
+                 
                 </ul>
               </div>
             </div>
@@ -794,20 +824,37 @@
         }
       }).then(response => {
         if (response.ok) {
-          status.innerHTML = "Thanks for your submission!";
+          // status.innerHTML = "Thanks for your submission!";
+          showDialog("Thanks for your submission!", 'success');
           form.reset()
         } else {
           response.json().then(data => {
             if (Object.hasOwn(data, 'errors')) {
-              status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              //status.innerHTML = data["errors"].map(error => error["message"]).join(", ")
+              showDialog(data["errors"].map(error => error["message"]).join(", "), 'error');
             } else {
-              status.innerHTML = "Oops! There was a problem submitting your form"
+              // status.innerHTML = "Oops! There was a problem submitting your form"
+              showDialog("Oops! There was a problem submitting your form", 'error');
             }
           })
         }
       }).catch(error => {
-        status.innerHTML = "Oops! There was a problem submitting your form"
+        //status.innerHTML = "Oops! There was a problem submitting your form"
+        showDialog("Oops! There was a problem submitting your form", 'error');
       });
+    }
+
+    // Helper function to show and then hide the dialog
+    function showDialog(message, type) {
+      const dialog = document.getElementById('responseDialog');
+      dialog.textContent = message;
+      dialog.className = 'dialog ' + type; // Set class for styling (success/error)
+      dialog.style.display = 'block';
+
+      // Automatically hide the dialog after 3 seconds
+      setTimeout(() => {
+        dialog.style.display = 'none';
+      }, 3000);
     }
     form.addEventListener("submit", handleSubmit)
   </script>
