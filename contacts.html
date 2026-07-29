@@ -276,16 +276,15 @@
                 </div>
               </div>
               <div class="d-flex align-items-start">
-                <div class="bg-light text-primary rounded-circle flex-shrink-0 fs-3 lh-1 p-3">
-                  <i class="bx bx-group"></i>
-                </div>
-                <div class="ps-3 ps-sm-4">
-                  <h2 class="h4 pb-1 mb-2">Careers</h2>
-                  <p class="mb-2">Sit ac ipsum leo lorem magna nunc mattis maecenas non vestibulum.</p>
-                  <div class="btn btn-link btn-lg px-0">
-                    Send an application
-                    <i class="bx bx-right-arrow-alt lead ms-2"></i>
-                  </div>
+                <img src="assets/img/my_photo.webp" class="rounded-circle flex-shrink-0 me-3" width="80" height="80"
+                  alt="Sk Shamimul Islam" style="object-fit: cover; border: 2px solid #6366f1;">
+                <div>
+                  <h2 class="h4 pb-1 mb-1">Sk Shamimul Islam</h2>
+                  <p class="fs-sm text-muted mb-2">Senior AI Automation & Cross-Platform Developer</p>
+                  <p class="mb-0 fs-sm"><a href="mailto:skshamimul@gmail.com" class="nav-link p-0 d-inline-block"><i
+                        class="bx bx-envelope me-1"></i>skshamimul@gmail.com</a></p>
+                  <p class="mb-0 fs-sm"><a href="tel:+8801937761214" class="nav-link p-0 d-inline-block"><i
+                        class="bx bx-phone me-1"></i>+880 1937761214</a></p>
                 </div>
               </div>
             </div>
@@ -296,45 +295,38 @@
             <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
               <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
               <div class="card-body position-relative zindex-2">
-                <h2 class="card-title pb-3 mb-4">Get Online Consultation</h2>
+                <h2 class="card-title pb-3 mb-4">Send Us a Message</h2>
                 <form class="row g-4 needs-validation" novalidate>
                   <div class="col-12">
                     <label for="fn" class="form-label fs-base">Full name</label>
-                    <input type="text" class="form-control form-control-lg" id="fn" required>
+                    <input type="text" class="form-control form-control-lg" id="fn" required placeholder="Your name">
                     <div class="invalid-feedback">Please enter your full name!</div>
                   </div>
                   <div class="col-12">
                     <label for="email" class="form-label fs-base">Email address</label>
-                    <input type="email" class="form-control form-control-lg" id="email" required>
-                    <div class="invalid-feedback">Please provid a valid email address!</div>
+                    <input type="email" class="form-control form-control-lg" id="email" required
+                      placeholder="Your email address">
+                    <div class="invalid-feedback">Please provide a valid email address!</div>
                   </div>
                   <div class="col-12">
-                    <label for="specialist" class="form-label fs-base">Specialist</label>
-                    <select class="form-select form-select-lg" id="specialist" required>
-                      <option value="" selected disabled>Choose a specialist</option>
-                      <option value="Therapist">Therapist</option>
-                      <option value="Dentist">Dentist</option>
-                      <option value="Cardiologist">Cardiologist</option>
-                      <option value="Pediatrician">Pediatrician</option>
-                      <option value="Gynecologist">Gynecologist</option>
-                      <option value="Surgeon">Surgeon</option>
+                    <label for="service" class="form-label fs-base">Service interested in</label>
+                    <select class="form-select form-select-lg" id="service" required>
+                      <option value="" selected disabled>Choose a service</option>
+                      <option value="AI Automation">AI Automation & Workflow Integration</option>
+                      <option value="Mobile Development">Mobile App Development (Flutter)</option>
+                      <option value="Web Development">Web Application Development</option>
+                      <option value="Consultation">Technical Architecture Consultation</option>
                     </select>
-                    <div class="invalid-feedback">Choose a specialist from the list!</div>
+                    <div class="invalid-feedback">Please choose a service from the list!</div>
                   </div>
-                  <div class="col-sm-6">
-                    <label for="date" class="form-label fs-base">Date</label>
-                    <input type="text" class="form-control form-control-lg" id="date"
-                      data-format='{"date": true, "datePattern": ["m", "d"]}' placeholder="mm/dd" required>
-                    <div class="invalid-feedback">Enter a date!</div>
-                  </div>
-                  <div class="col-sm-6">
-                    <label for="time" class="form-label fs-base">Time</label>
-                    <input type="text" class="form-control form-control-lg" id="time"
-                      data-format='{"time": true, "timePattern": ["h", "m"]}' placeholder="hh:mm" required>
-                    <div class="invalid-feedback">Enter a time!</div>
+                  <div class="col-12">
+                    <label for="message" class="form-label fs-base">Message</label>
+                    <textarea class="form-control form-control-lg" id="message" rows="4" required
+                      placeholder="Describe your project..."></textarea>
+                    <div class="invalid-feedback">Please write your message!</div>
                   </div>
                   <div class="col-12 pt-2 pt-sm-3">
-                    <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Make an appointment</button>
+                    <button type="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Send Message</button>
                   </div>
                 </form>
               </div>
@@ -351,9 +343,8 @@
       <div class="row py-5">
         <div class="col-lg-6 mb-5 mb-lg-0">
           <div class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden">
-
             <iframe class="d-block h-100"
-              src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1085.3948161007372!2d90.36680924867206!3d23.78947881995377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sJanata%20Road%2C%20Dhaka!5e0!3m2!1sen!2sbd!4v1692889397630!5m2!1sen!2sbd"
+              src="https://maps.google.com/maps?q=Rosulpur,%20Satkhira%20Sadar,%20Khulna,%20Bangladesh&t=&z=14&ie=UTF8&iwloc=&output=embed"
               style="border: 0; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
           </div>
         </div>
@@ -362,17 +353,39 @@
           <ul class="list-unstyled pb-2 pb-lg-0 mb-4 mb-lg-5">
             <li class="d-flex pb-1 mb-2">
               <i class="bx bx-map text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-              65/2, Middle Pirerbagh, Janata Road Mirpur, Dhaka 1216
+              <div>
+                <strong>Primary Address:</strong><br>
+                house 04 Road 01 Rosulpur Satkhira Sadar,<br>
+                H NO 1112 Kadomtola Bazar Satkhira Sadar,<br>
+                Khulna - 9400, Bangladesh
+              </div>
+            </li>
+            <li class="d-flex pb-1 mb-2">
+              <i class="bx bx-buildings text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
+              <div>
+                <strong>Sister Concern:</strong><br>
+                Just AIO Technologies
+              </div>
+            </li>
+            <li class="d-flex pb-1 mb-2">
+              <i class="bx bx-envelope text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
+              <div>
+                <strong>Email Address:</strong><br>
+                <a href="mailto:skshamimul@gmail.com" class="nav-link p-0 d-inline-block">skshamimul@gmail.com</a>
+                (Primary)<br>
+                <a href="mailto:aiotech.us@gmail.com" class="nav-link p-0 d-inline-block">aiotech.us@gmail.com</a>
+                (Alternative)<br>
+                <a href="mailto:sheikhsoft.com@gmail.com"
+                  class="nav-link p-0 d-inline-block">sheikhsoft.com@gmail.com</a> (Company)
+              </div>
             </li>
             <li class="d-flex pb-1 mb-2">
               <i class="bx bx-phone-call text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-              sheikhsoft.com@gmail.com
+              <div>
+                <strong>Phone Number:</strong><br>
+                <a href="tel:+8801937761214" class="nav-link p-0">+880 1937761214</a>
+              </div>
             </li>
-            <li class="d-flex pb-1 mb-2">
-              <i class="bx bx-phone-call text-primary fs-xl me-2" style="margin-top: .125rem;"></i>
-              (880) 1937761214
-            </li>
-
           </ul>
 
 
@@ -460,7 +473,7 @@
             </div>
             <div class="col-xl-4 col-lg-5 pt-2 pt-lg-0">
               <h6 class="mb-2">Contact Us</h6>
-              <a href="mailto:email@example.com" class="fw-medium">sheikhsoft.com@gmail.com</a>
+              <a href="mailto:sheikhsoft.com@gmail.com" class="fw-medium">sheikhsoft.com@gmail.com</a>
             </div>
           </div>
         </div>
