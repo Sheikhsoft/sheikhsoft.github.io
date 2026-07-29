@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Flexboard | Documents</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="SheikhSoft - Software Dev Agency">
+    <meta name="keywords" content=" creative agency, mobile app showcasesoftware">
+    <meta name="author" content="SheikhSoft">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="../assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="../assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="../assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="../assets/vendor/boxicons/css/boxicons.min.css" />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="../assets/css/theme.min.css">
+
+    <!-- Theme mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+    </script>
+</head>
+
+
+<!-- Body -->
+
+<body>
+
+
+    <!-- Navbar -->
+    <header class="header navbar navbar-expand bg-light border-bottom border-light shadow fixed-top" data-scroll-header>
+        <div class="container-fluid pe-lg-4">
+            <div class="d-flex align-items-center">
+                <a href="getting-started.html" class="navbar-brand flex-shrink-0 py-1 py-lg-2">
+                    <img src="../assets/img/logo_small.png" width="47" alt="Flexboard">
+                    Flexboard
+                </a>
+                <span class="badge bg-success">Docs</span>
+            </div>
+            <div class="d-flex align-items-center w-100">
+                <ul class="navbar-nav d-none d-lg-flex" style="padding-left: 11.75rem;">
+                    <li class="nav-item">
+                        <a href="https://matrimony.sheikhsoft.com/" class="nav-link" , target="_blank">
+                            <i class="bx bx-desktop opacity-70 fs-lg me-1"></i>
+                            &nbsp;Live preview
+                        </a>
+                    </li>
+
+                </ul>
+                <button type="button" class="navbar-toggler d-block d-lg-none ms-auto me-4" data-bs-toggle="offcanvas"
+                    data-bs-target="#docsNav" aria-controls="docsNav" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="form-check form-switch mode-switch pe-lg-1 ms-lg-auto" data-bs-toggle="mode">
+                    <input type="checkbox" class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block d-lg-none d-xl-block"
+                        for="theme-mode">Light</label>
+                    <label class="form-check-label d-none d-sm-block d-lg-none d-xl-block" for="theme-mode">Dark</label>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Main sidebar navigation -->
+    <aside class="dark-mode">
+        <div id="docsNav"
+            class="offcanvas-lg offcanvas-start d-flex flex-column position-fixed top-0 start-0 vh-100 bg-dark border-end-lg"
+            style="width: 21rem; z-index: 1045;">
+            <div class="offcanvas-header d-none d-lg-flex justify-content-start">
+                <a href="index.html" class="navbar-brand text-dark d-none d-lg-flex py-0">
+                    <img src="../assets/img/logo_small.png" width="47" alt="Silicon">
+                    Flexboard
+                </a>
+                <span class="badge bg-success d-none d-lg-inline-block">Docs</span>
+            </div>
+            <div class="offcanvas-header d-block d-lg-none border-bottom">
+                <div class="d-flex align-items-center justify-content-between mb-3">
+                    <h5 class="d-lg-none mb-0">Menu</h5>
+                    <button type="button" class="btn-close d-lg-none" data-bs-dismiss="offcanvas"
+                        data-bs-target="#docsNav"></button>
+                </div>
+                <div class="list-group list-group-flush mx-n4">
+                    <a href="https://matrimony.sheikhsoft.com/"
+                        class="list-group-item list-group-item-action d-flex align-items-center border-0 py-2 px-4">
+                        <i class="bx bx-desktop fs-lg opacity-80 me-2"></i>
+                        Preview
+                    </a>
+
+                </div>
+            </div>
+            <div class="offcanvas-body p-4">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide h-auto">
+                        <h3 class="fs-lg">Contents</h3>
+                        <div class="list-group list-group-flush mx-n4 pb-2">
+                            <a href="index.html"
+                                class="list-group-item list-group-item-action border-0 py-2 px-4">Prerequisite
+                                Tools & Setup</a>
+                            <a href="getting-started.html"
+                                class="list-group-item list-group-item-action border-0 py-2 px-4 active">Getting Started
+                                (Build
+                                &
+                                Run)</a>
+                            <a href="configuration-customization.html"
+                                class="list-group-item list-group-item-action border-0 py-2 px-4">Configuration
+                                &
+                                Customization</a>
+                            <a href="help-support.html"
+                                class="list-group-item list-group-item-action border-0 py-2 px-4">Help and
+                                Support</a>
+                            <a href="change-logs.html"
+                                class="list-group-item list-group-item-action border-0 py-2 px-4">Change Log</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-scrollbar end-0"></div>
+
+            </div>
+
+        </div>
+    </aside>
+
+
+    <!-- Page container -->
+    <main class="docs-container pt-5 pb-3 pb-lg-4">
+        <div class="container-fluid px-xxl-5 px-lg-4 pt-4 pt-lg-5 pb-4">
+
+            <!-- Page title -->
+
+            <h1 class="ps-lg-2 ps-xxl-0 mt-2 mt-lg-0 pt-4 pb-2 mb-3 mb-xl-4">Getting Started (Build & Run)</h1>
+            <p>Follow below steps to build and run your application. </p>
+            <div class="alert alert-warning" role="alert">
+                <h2 class="h4 pt-3">Important:</h2>
+                All below steps are must be followed to build and run application
+            </div>
+
+            </br>
+            </br>
+            <h2 class="h3 mt-n2 mt-xl-0">Download Project</h2>
+            <p>Download and find the your project folder, use your preferred IDE (Android Studio / Visual Studio Code /
+                IntelliJ IDEA) to run the project.</p>
+            <img src="https://i.ibb.co/N1KLXK9/Screenshot-2020-08-28-at-4-48-37-PM.png" class="rounded-3"
+                alt="Rounded image">
+
+
+            <h2>Project Structure Documentation</h2>
+            <p>This document outlines the folder and file structure of the project, explaining the purpose of each major
+                component.</p>
+
+            <h2>Root Directory</h2>
+            <ul>
+
+
+                <li><strong><code>analysis_options.yaml</code></strong>: Configures the Dart static analyzer to enforce
+                    code style, identify potential bugs, and ensure code quality.</li>
+                <li><strong><code>flutter_launcher_icons.yaml</code></strong>: Configuration file for the
+                    <code>flutter_launcher_icons</code> package, used to generate app launcher icons for different
+                    platforms from a single source image.
+                </li>
+
+                <li><strong><code>pubspec.yaml</code></strong>: The project's manifest file. It defines project
+                    metadata, dependencies (packages), and assets (images, fonts, etc.). This is a key configuration
+                    file for any Flutter project.</li>
+                <li><strong><code>README.md</code></strong>: A Markdown file containing introductory information about
+                    the project.</li>
+            </ul>
+
+            <h2>Core Application Code (<code>lib/</code>)</h2>
+            <p>This is where all the Dart code for the application resides.</p>
+            <ul>
+                <li><strong><code>lib/main.dart</code></strong>: The entry point of the Flutter application.</li>
+                <li><strong><code>lib/app/</code></strong>: Contains core application setup and configuration.
+                    <ul>
+                        <li><code>theme/</code>: Theming and styling logic (e.g., colors, text styles).</li>
+                        <li><code>view/</code>: Core app widgets and views.</li>
+                    </ul>
+                </li>
+                <li><strong><code>lib/core/</code></strong>: Shared utilities, constants, and core functionalities used
+                    across the application.
+                    <ul>
+                        <li><code>constants/</code>: Application-wide constants (e.g., API endpoints, keys, default
+                            values).</li>
+                        <li><code>utils/</code>: Utility functions and helper classes (e.g., formatters, validators).
+                        </li>
+                    </ul>
+                </li>
+                <li><strong><code>lib/generated/</code></strong>: Auto-generated files, typically from code generation
+                    packages. Do not edit these manually.
+                    <ul>
+                        <li><code>codegen_loader.g.dart</code>: Generated for the <code>easy_localization</code> package
+                            for loading translation assets.</li>
+                        <li><code>locale_keys.g.dart</code>: Generated keys for localized strings, providing type-safe
+                            access.</li>
+                    </ul>
+                </li>
+                <li><strong><code>lib/model/</code></strong>: Data model classes that define the structure of data used
+                    in the app (e.g., <code>User</code>, <code>Product</code>, <code>Order</code>).</li>
+                <li><strong><code>lib/router/</code></strong>: Navigation and routing logic.
+                    <ul>
+                        <li><code>app_router.dart</code>: Defines the application's routes and navigation setup, likely
+                            using the <code>auto_route</code> package.</li>
+                        <li><code>app_router.gr.dart</code>: Auto-generated file by <code>auto_route</code> containing
+                            the actual router implementation.</li>
+                    </ul>
+                </li>
+                <li><strong><code>lib/service/</code></strong>: Business logic and services that interact with data
+                    sources or external APIs.
+                    <ul>
+                        <li><code>service_locator.dart</code>: Sets up dependency injection (e.g., using
+                            <code>get_it</code>) to provide services throughout the app.
+                        </li>
+                        <li><code>theme_service.dart</code>, <code>theme_service_hive.dart</code>: Services for managing
+                            and persisting the application's theme.</li>
+                        <li><code>toast_service.dart</code>: A utility service for showing notifications (toasts) to the
+                            user.</li>
+                    </ul>
+                </li>
+                <li><strong><code>lib/ui/</code></strong>: Contains all the UI components of the application.
+                    <ul>
+                        <li><code>screen/</code>: Top-level widgets, where each file typically represents a full screen
+                            or page in the app.</li>
+                        <li><code>widget/</code>: Reusable UI components (widgets) that are used across multiple screens
+                            (e.g., custom buttons, cards, dialogs).</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2>Platform-Specific Folders</h2>
+            <p>These folders contain the native project wrappers for each platform that Flutter supports.</p>
+            <ul>
+                <li><strong><code>android/</code></strong>: Contains the native Android project. You edit files here to
+                    configure Android-specific settings like permissions in <code>AndroidManifest.xml</code> or build
+                    settings in <code>build.gradle</code>.</li>
+                <li><strong><code>ios/</code></strong>: Contains the native iOS project. You edit files here to
+                    configure iOS-specific settings in <code>Info.plist</code> or manage dependencies with
+                    <code>Podfile</code>.
+                </li>
+                <li><strong><code>linux/</code></strong>: Contains the native Linux desktop project.</li>
+                <li><strong><code>macos/</code></strong>: Contains the native macOS desktop project.</li>
+                <li><strong><code>windows/</code></strong>: Contains the native Windows desktop project.</li>
+                <li><strong><code>web/</code></strong>: Contains the files for the web version of the application,
+                    including <code>index.html</code> and the favicon.</li>
+            </ul>
+
+            <h2>Assets</h2>
+            <ul>
+                <li><strong><code>assets/</code></strong>: Static assets used by the application.
+                    <ul>
+                        <li><code>fonts/</code>: Custom font files.</li>
+                        <li><code>google_fonts/</code>: Cached Google Fonts for offline use.</li>
+                        <li><code>images/</code>: Image files (e.g., <code>.png</code>, <code>.jpg</code>).</li>
+                        <li><code>svgs/</code>: SVG vector image files.</li>
+                        <li><code>translations/</code>: JSON files for localization, containing key-value pairs for
+                            different languages.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h2> Test</h2>
+            <ul>
+
+                <li><strong><code>test/</code></strong>: Contains automated tests for your application (e.g., unit
+                    tests, widget tests).</li>
+            </ul>
+
+
+            <h2 class="h3 pt-3">Get Dependencies</h2>
+            <p>After you loaded project successfully, run the following command in the terminal to install all the
+                dependencies listed in the&nbsp;<a style="background-color: #ffffff;"
+                    href="https://dart.dev/tools/pub/pubspec"><code
+                        style="font-size: 14px;">pubspec.yaml</code></a>&nbsp;file in the project’s root directory or
+                just click on&nbsp;<span style="font-weight: bold;">Pub get&nbsp;</span>in pubspec.yaml file<span
+                    style="font-weight: bold;">&nbsp;</span>if you don’t want to use command.</p>
+
+            <pre><code>flutter pub get</code></pre>
+            <div class="alert alert-warning" role="alert">
+                <h2 class="h4 pt-3">Important:</h2>
+                All below steps are must be followed to build and run application
+            </div>
+            <img src="https://i.ibb.co/XkVSF8K/Screenshot-2020-08-28-at-4-41-37-PM.png" class="rounded-3"
+                alt="Rounded image">
+
+            <h2 class="h3 pt-3">Build and Run App</h2>
+
+            <div class="elementor-widget-container">
+                <div class="steps-panel">
+                    <ol class="ordered-list">
+                        <li>Locate the main Android Studio toolbar.</li>
+                        <li>In the&nbsp;<span style="font-weight: bolder; color: #4a4a4a;">target
+                                selector</span><span style="color: #4a4a4a;">, select an Android device for running
+                                the app. If none are listed as available, select&nbsp;</span><span
+                                style="font-weight: bolder; color: #4a4a4a;">Tools &gt; Android &gt; AVD
+                                Manager</span><span style="color: #4a4a4a;">&nbsp;and create one there. For details,
+                                see&nbsp;</span><a style="color: #1389fd; background-color: #ffffff;"
+                                href="https://developer.android.com/studio/run/managing-avds">Managing AVDs</a><span
+                                style="color: #4a4a4a;">.</span></li>
+                        <li>Click the run icon in the toolbar, or invoke the menu item&nbsp;<span
+                                style="font-weight: bolder; color: #4a4a4a;">Run &gt; Run. </span></li>
+                    </ol>
+                </div>
+            </div>
+            <img src="https://i.ibb.co/47BGtF2/No-VMEEPJMPovn-Xd-VFdfx-JYs-Oy-LAss-Nu-VWqw8-Yfm-K.png" class="rounded-3"
+                alt="Rounded image">
+            <p>After the app build completes, you’ll see the app on your device.</p>
+            <p>If you don’t use <b>Android Studio or IntelliJ</b> you can use the command line to run your application
+                using the following command</p>
+            <div class="alert alert-warning" role="alert">
+                <h2 class="h4 pt-3">Important:</h2>
+                Below step requires flutter path to be set in your Environment variables. See
+                https://flutter.dev/docs/get-started/install/windows
+            </div>
+            <pre><code>flutter run</code></pre>
+            <p>You will see below like screen after you have build your app successfully </p>
+            <img src="https://i.ibb.co/wCxMQxN/Screenshot-2020-08-28-at-4-47-54-PM.png" class="rounded-3"
+                alt="Rounded image">
+
+
+        </div>
+    </main>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="../assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="../assets/js/theme.min.js"></script>
+</body>
+
+<!-- Mirrored from silicon.createx.studio/docs/getting-started.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 20 Aug 2023 05:21:12 GMT -->
+
+</html>
