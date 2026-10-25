@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Terms of Service & EULA | SheikhSoft</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terms of Service, End User License Agreement (EULA), and Smart Ledger Pro auto-renewable subscription terms for Smart Ledger: AI Accounting.">
+    <meta name="keywords" content="Smart Ledger, AI Accounting, accounting software, bookkeeping, financial privacy, terms of use, EULA, SheikhSoft, account deletion">
+    <meta name="author" content="SheikhSoft">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
+    <link rel="manifest" href="assets/favicon/site.webmanifest">
+    <link rel="mask-icon" href="assets/favicon/safari-pinned-tab.svg" color="#6366f1">
+    <link rel="shortcut icon" href="assets/favicon/favicon.ico">
+    <meta name="msapplication-TileColor" content="#080032">
+    <meta name="msapplication-config" content="assets/favicon/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css" />
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Custom Document Styles -->
+    <style>
+        .legal-card {
+            border-radius: 1rem;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        .legal-badge {
+            font-size: 0.85rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 50rem;
+        }
+        .legal-callout {
+            border-left: 4px solid #6366f1;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            background-color: rgba(99, 102, 241, 0.05);
+            margin: 1.75rem 0;
+        }
+        .dark-mode .legal-callout {
+            background-color: rgba(99, 102, 241, 0.12);
+        }
+        .warning-callout {
+            border-left: 4px solid #ef4444;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            background-color: rgba(239, 68, 68, 0.06);
+            margin: 1.75rem 0;
+        }
+        .dark-mode .warning-callout {
+            background-color: rgba(239, 68, 68, 0.12);
+        }
+        .success-callout {
+            border-left: 4px solid #10b981;
+            padding: 1.25rem 1.5rem;
+            border-radius: 0 0.75rem 0.75rem 0;
+            background-color: rgba(16, 185, 129, 0.06);
+            margin: 1.75rem 0;
+        }
+        .dark-mode .success-callout {
+            background-color: rgba(16, 185, 129, 0.12);
+        }
+        .page-loading {
+            position: fixed;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            -webkit-transition: all .4s .2s ease-in-out;
+            transition: all .4s .2s ease-in-out;
+            background-color: #fff;
+            opacity: 0;
+            visibility: hidden;
+            z-index: 9999;
+        }
+        .dark-mode .page-loading {
+            background-color: #0b0f19;
+        }
+        .page-loading.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        .page-loading-inner {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 100%;
+            text-align: center;
+            -webkit-transform: translateY(-50%);
+            transform: translateY(-50%);
+            -webkit-transition: opacity .2s ease-in-out;
+            transition: opacity .2s ease-in-out;
+            opacity: 0;
+        }
+        .page-loading.active>.page-loading-inner {
+            opacity: 1;
+        }
+        .page-loading-inner>span {
+            display: block;
+            font-size: 1rem;
+            font-weight: normal;
+            color: #9397ad;
+        }
+        .dark-mode .page-loading-inner>span {
+            color: #fff;
+            opacity: .6;
+        }
+        .page-spinner {
+            display: inline-block;
+            width: 2.75rem;
+            height: 2.75rem;
+            margin-bottom: .75rem;
+            vertical-align: text-bottom;
+            border: .15em solid #b4b7c9;
+            border-right-color: transparent;
+            border-radius: 50%;
+            -webkit-animation: spinner .75s linear infinite;
+            animation: spinner .75s linear infinite;
+        }
+        .dark-mode .page-spinner {
+            border-color: rgba(255, 255, 255, .4);
+            border-right-color: transparent;
+        }
+        @-webkit-keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes spinner {
+            100% {
+                -webkit-transform: rotate(360deg);
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+        let mode = window.localStorage.getItem('mode'),
+            root = document.getElementsByTagName('html')[0];
+        if (mode !== null && mode === 'dark') {
+            root.classList.add('dark-mode');
+        } else {
+            root.classList.remove('dark-mode');
+        }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+        (function () {
+            window.onload = function () {
+                const preloader = document.querySelector('.page-loading');
+                if (preloader) {
+                    preloader.classList.remove('active');
+                    setTimeout(function () {
+                        preloader.remove();
+                    }, 1000);
+                }
+            };
+        })();
+    </script>
+</head>
+
+<body>
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+        <div class="page-loading-inner">
+            <div class="page-spinner"></div><span>Loading...</span>
+        </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <main class="page-wrapper position-relative zindex-2">
+        <header class="header navbar navbar-expand-lg bg-light border-bottom border-light shadow-sm fixed-top">
+            <div class="container px-3">
+                <a href="index.html" class="navbar-brand pe-3">
+                    <img src="assets/img/logo_small.png" width="47" alt="SheikhSoft">
+                    SheikhSoft
+                </a>
+                <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+                    <div class="offcanvas-header border-bottom border-light">
+                        <h5 class="offcanvas-title text-white">Menu</h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Apps</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a href="https://sheikhsoft.com" class="dropdown-item">Smart Ledger: AI Accounting</a></li>
+                                    <li><a href="internetguard/" class="dropdown-item" target="_blank">InternetGuard FireWall</a></li>
+                                    <li><a href="#" class="dropdown-item">BetterHalf Matrimony</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="services.html" class="nav-link">Services</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="about.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Legal &amp; Policy</a>
+                                <ul class="dropdown-menu dropdown-menu-dark">
+                                    <li><a href="privacy-policy.html" class="dropdown-item">Privacy Policy</a></li>
+                                    <li><a href="terms.html" class="dropdown-item">Terms &amp; Conditions (EULA)</a></li>
+                                    <li><a href="delete-account.html" class="dropdown-item">Account Deletion</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a href="contacts.html" class="nav-link">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-check form-switch mode-switch pe-lg-1 ms-auto me-4" data-bs-toggle="mode">
+                    <input type="checkbox" class="form-check-input" id="theme-mode">
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+                    <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+                </div>
+                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Main Content Wrapper -->
+        <div class="bg-secondary pt-5" style="padding-bottom: 80px;">
+            <!-- Breadcrumb -->
+            <nav class="container pt-5 pb-3 mb-2" aria-label="breadcrumb">
+                <ol class="breadcrumb pt-lg-3 mb-0">
+                    <li class="breadcrumb-item">
+                        <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">Terms & Conditions</li>
+                </ol>
+            </nav>
+
+            <section class="container pb-2 pb-md-4 pb-lg-5 mb-3">
+                <div class="d-flex flex-wrap align-items-center justify-content-between mb-4 pb-3 border-bottom">
+                    <div>
+                        <h1 class="display-5 mb-2">Terms of Service &amp; EULA</h1>
+                        <p class="text-muted fs-sm mb-0">Applicable to <strong>Smart Ledger: AI Accounting</strong> &amp; SheikhSoft Services &bull; Last Updated: <strong>October 25, 2026</strong></p>
+                    </div>
+                    <div class="mt-3 mt-md-0 d-flex flex-wrap gap-2">
+                        <a href="privacy-policy.html" class="btn btn-outline-primary btn-sm"><i class="bx bx-shield-quarter me-1"></i>Privacy Policy</a>
+                        <a href="terms.html" class="btn btn-outline-primary btn-sm"><i class="bx bx-file me-1"></i>Terms &amp; EULA</a>
+                        <a href="delete-account.html" class="btn btn-outline-danger btn-sm"><i class="bx bx-trash me-1"></i>Delete Account</a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-8">
+                        <div class="card card-body border-0 shadow-sm p-4 p-md-5 mb-4">
+                            
+                            <!-- Notice Box -->
+                            <div class="legal-callout">
+                                <h5 class="text-primary mb-2"><i class="bx bx-receipt me-2"></i>Smart Ledger Pro Subscriptions &amp; EULA</h5>
+                                <p class="mb-0 fs-sm text-body">
+                                    These Terms of Service constitute a binding End User License Agreement (EULA) between you and SheikhSoft. They incorporate Apple's Standard EULA and specify the terms governing auto-renewable subscriptions for <strong>Smart Ledger Pro</strong> pursuant to Apple App Store Review Guideline 3.1.2(c).
+                                </p>
+                            </div>
+
+                            <h3 class="h4 mt-3 mb-3">1. Agreement to Terms</h3>
+                            <p class="text-muted">
+                                By downloading, installing, accessing, or using the <strong>Smart Ledger: AI Accounting</strong> application ("Application"), the website at <a href="https://sheikhsoft.com">sheikhsoft.com</a> ("Website"), or any services provided by SheikhSoft ("we", "us", or "our"), you agree to be bound by these Terms of Service and End User License Agreement ("Terms"). If you do not agree to these Terms, do not install, access, or use the Application.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">2. End User License Agreement (EULA)</h3>
+                            <p class="text-muted">
+                                <strong>License Grant:</strong> SheikhSoft grants you a limited, non-exclusive, non-transferable, revocable license to install and use the Application on any Apple-branded products that you own or control, strictly as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions and this agreement.
+                            </p>
+                            <p class="text-muted">
+                                <strong>Standard Apple EULA Incorporation:</strong> For apps distributed via the Apple App Store, this agreement supplements and incorporates the standard terms set forth in the <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener">Apple Licensed Application End User License Agreement (Apple Standard EULA)</a>. In the event of any conflict, these terms shall apply to the maximum extent permitted by applicable law.
+                            </p>
+                            <p class="text-muted">
+                                <strong>Restrictions:</strong> You agree not to: (a) decompile, reverse engineer, disassemble, or attempt to derive the source code of the Application; (b) modify, translate, or create derivative works based upon the Application; (c) rent, lease, lend, sell, sublicense, or distribute the Application; or (d) remove, obscure, or alter any copyright notices or proprietary trademarks affixed to the Application.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3" id="subscriptions">3. Auto-Renewable Subscriptions — Smart Ledger Pro</h3>
+                            <p class="text-muted">
+                                Smart Ledger: AI Accounting offers both free features and optional premium subscriptions under the publication title <strong>Smart Ledger Pro</strong>. The following disclosures are provided in strict accordance with <strong>Apple App Store Review Guideline 3.1.2(c)</strong>:
+                            </p>
+
+                            <div class="table-responsive mb-4">
+                                <table class="table table-bordered align-middle fs-sm">
+                                    <thead class="table-light">
+                                        <tr>
+                                            <th>Plan Name</th>
+                                            <th>Subscription Duration</th>
+                                            <th>Price</th>
+                                            <th>Free Trial</th>
+                                            <th>Key Entitlements</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><strong>Smart Ledger Pro Monthly</strong></td>
+                                            <td>1 Month (Auto-Renewable)</td>
+                                            <td><span class="badge bg-primary fs-xs">$9.99 / month</span></td>
+                                            <td>None</td>
+                                            <td>Unlimited workspaces, full double-entry ledger, receipt OCR scanning, advanced PDF/Excel exports, priority cloud sync.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><strong>Smart Ledger Pro Annual</strong></td>
+                                            <td>1 Year (Auto-Renewable)</td>
+                                            <td><span class="badge bg-success fs-xs">$79.99 / year</span><br><small class="text-muted">(Save ~33%)</small></td>
+                                            <td><span class="badge bg-info text-dark fs-xs">7-Day Free Trial</span></td>
+                                            <td>All Pro features, complete annual access, unlimited receipt OCR scans, multi-company accounting, 7-day zero-risk trial.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="card border-primary mb-4">
+                                <div class="card-body">
+                                    <h5 class="h6 card-title text-primary"><i class="bx bx-info-circle me-1"></i>Mandatory Subscription Terms &amp; Billing Disclosures</h5>
+                                    <ul class="fs-sm text-muted mb-0">
+                                        <li class="mb-2"><strong>Payment:</strong> Payment will be charged to your Apple ID Account at confirmation of purchase, or upon expiration of the 7-day free trial period for the Annual plan.</li>
+                                        <li class="mb-2"><strong>Automatic Renewal:</strong> Subscription automatically renews unless auto-renew is turned off at least 24 hours before the end of the current billing cycle.</li>
+                                        <li class="mb-2"><strong>Renewal Charges:</strong> Your Apple ID Account will be charged for renewal within 24 hours prior to the end of the current period at the then-applicable renewal rate ($9.99/month for Monthly or $79.99/year for Annual).</li>
+                                        <li class="mb-2"><strong>Free Trial Forfeiture:</strong> Any unused portion of a free trial period, if offered, will be forfeited when the user purchases a subscription to that publication, where applicable.</li>
+                                        <li class="mb-2"><strong>Managing &amp; Canceling:</strong> You can manage and cancel your subscriptions at any time directly through your Apple ID Account Settings.
+                                            <br>Direct Functional Link: <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener" class="fw-bold">https://apps.apple.com/account/subscriptions</a>
+                                        </li>
+                                        <li class="mb-0"><strong>Price Changes:</strong> Notice of any price changes will be communicated in accordance with Apple Media Services policies. If you do not accept a new price, you may cancel before the change takes effect.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <h3 class="h4 mt-4 mb-3">4. Financial Disclaimer &amp; Not Professional Tax Advice</h3>
+                            <div class="warning-callout">
+                                <h6 class="text-danger mb-1"><i class="bx bx-error-circle me-1"></i>Important Financial Disclaimer</h6>
+                                <p class="fs-sm text-muted mb-0">
+                                    Smart Ledger: AI Accounting is a software productivity application designed to assist with bookkeeping, double-entry ledger calculation, and document organization. <strong>SheikhSoft is not a Certified Public Accountant (CPA), accounting firm, legal advisor, or chartered tax consultant.</strong> The Application, AI categorization, and reports generated do not constitute formal professional accounting, legal, or tax advice. You are solely responsible for reviewing and verifying the accuracy of all financial transactions, vouchers, tax calculations, and tax filings with a licensed professional before submission to statutory authorities.
+                                </p>
+                            </div>
+
+                            <h3 class="h4 mt-4 mb-3">5. User Accounts &amp; Security</h3>
+                            <p class="text-muted">
+                                To use Smart Ledger: AI Accounting, you may create an account using your email address. You agree to provide accurate and complete registration information. You are solely responsible for safeguarding your login credentials and for all activities that occur under your account. If you suspect unauthorized access, notify us immediately at <a href="mailto:support@sheikhsoft.com">support@sheikhsoft.com</a>.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">6. User Content &amp; Ownership</h3>
+                            <p class="text-muted">
+                                <strong>Your Ownership:</strong> You retain 100% intellectual property ownership of all accounting data, company records, transaction ledgers, vouchers, customer records, and receipt images ("User Content") that you enter into or upload to Smart Ledger: AI Accounting.
+                            </p>
+                            <p class="text-muted">
+                                <strong>Service License:</strong> You grant SheikhSoft only the limited, worldwide, non-exclusive license necessary to store, back up, process, and synchronize your User Content solely to operate the Application and provide its services to you. We do not sell your User Content or share it with advertisers.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">7. Account Deletion &amp; Termination</h3>
+                            <p class="text-muted">
+                                You may terminate your account and delete all associated data at any time directly through the app (Profile &gt; Settings &gt; Danger Zone &gt; Delete Account) or online via our <a href="delete-account.html">Account Deletion Page</a>. Account deletion triggers a complete, permanent erasure of all user records, workspaces, financial entries, and cloud backups as described in our <a href="privacy-policy.html#account-deletion">Privacy Policy</a>.
+                            </p>
+                            <p class="text-muted">
+                                SheikhSoft reserves the right to suspend or terminate accounts that violate these Terms, engage in fraud, or abuse our infrastructure, with or without prior notice.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">8. Limitation of Liability</h3>
+                            <p class="text-muted">
+                                TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, IN NO EVENT SHALL SHEIKHSOFT, ITS DIRECTORS, EMPLOYEES, OR AGENTS BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, INCLUDING BUT NOT LIMITED TO LOSS OF PROFITS, DATA, GOODWILL, TAX PENALTIES, AUDIT ASSESSMENTS, OR OTHER INTANGIBLE LOSSES RESULTING FROM: (A) YOUR ACCESS TO OR USE OF OR INABILITY TO ACCESS OR USE THE APPLICATION; (B) ANY ERRORS, INACCURACIES, OR OMISSIONS IN ANY FINANCIAL REPORTS GENERATED BY THE APPLICATION; OR (C) UNAUTHORIZED ACCESS TO OR ALTERATION OF YOUR DATA.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">9. Governing Law</h3>
+                            <p class="text-muted">
+                                These Terms shall be governed by and construed in accordance with the laws of Bangladesh, without regard to its conflict of law provisions. Any legal action or proceeding arising out of these Terms shall be instituted exclusively in the competent courts of Dhaka, Bangladesh, and you consent to the jurisdiction thereof.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">10. Modifications to Terms</h3>
+                            <p class="text-muted">
+                                We reserve the right, at our sole discretion, to modify or replace these Terms at any time. If a revision is material, we will provide at least 30 days' notice prior to any new terms taking effect via our website or an in-app notice. By continuing to access or use our Application after those revisions become effective, you agree to be bound by the revised terms.
+                            </p>
+
+                            <h3 class="h4 mt-4 mb-3">11. Contact &amp; Support</h3>
+                            <p class="text-muted">
+                                If you have any questions regarding these Terms or the EULA, please reach out:
+                            </p>
+                            <div class="p-3 border rounded bg-secondary">
+                                <h6 class="mb-1 text-primary">SheikhSoft Legal &amp; Licensing</h6>
+                                <p class="fs-sm text-muted mb-1"><strong>Email:</strong> <a href="mailto:support@sheikhsoft.com">support@sheikhsoft.com</a> or <a href="mailto:sheikhsoft.com@gmail.com">sheikhsoft.com@gmail.com</a></p>
+                                <p class="fs-sm text-muted mb-1"><strong>Hotline:</strong> +880 1937761214</p>
+                                <p class="fs-sm text-muted mb-0"><strong>Website:</strong> <a href="https://sheikhsoft.com">https://sheikhsoft.com</a></p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Navigation & Quick Links -->
+                    <div class="col-lg-4">
+                        <div class="position-sticky" style="top: 100px;">
+                            <div class="card border-0 shadow-sm p-4 mb-4">
+                                <h5 class="h6 mb-3"><i class="bx bx-list-ul me-2 text-primary"></i>Terms Navigation</h5>
+                                <ul class="nav flex-column fs-sm">
+                                    <li class="nav-item mb-2"><a href="#eula" class="nav-link px-0 py-1 text-muted">2. Apple EULA License</a></li>
+                                    <li class="nav-item mb-2"><a href="#subscriptions" class="nav-link px-0 py-1 text-primary fw-semibold"><i class="bx bx-credit-card me-1"></i>3. Smart Ledger Pro Subscriptions</a></li>
+                                    <li class="nav-item mb-2"><a href="#disclaimer" class="nav-link px-0 py-1 text-muted">4. Financial Disclaimer</a></li>
+                                    <li class="nav-item mb-2"><a href="#ownership" class="nav-link px-0 py-1 text-muted">6. 100% User Data Ownership</a></li>
+                                    <li class="nav-item mb-2"><a href="#termination" class="nav-link px-0 py-1 text-muted">7. Account Deletion</a></li>
+                                    <li class="nav-item mb-2"><a href="#liability" class="nav-link px-0 py-1 text-muted">8. Limitation of Liability</a></li>
+                                </ul>
+                            </div>
+
+                            <div class="card border-0 shadow-sm p-4 mb-4 bg-primary text-white">
+                                <h5 class="h6 text-white mb-2"><i class="bx bx-shield-quarter me-2"></i>Privacy Policy</h5>
+                                <p class="fs-xs opacity-75 mb-3">Learn how we encrypt and secure your confidential bookkeeping data.</p>
+                                <a href="privacy-policy.html" class="btn btn-light btn-sm w-100 mb-2"><i class="bx bx-shield me-1"></i>Read Privacy Policy</a>
+                                <a href="delete-account.html" class="btn btn-outline-light btn-sm w-100"><i class="bx bx-trash me-1"></i>Delete Account</a>
+                            </div>
+
+                            <div class="card border-0 shadow-sm p-4">
+                                <h5 class="h6 mb-2"><i class="bx bx-cog me-2 text-primary"></i>Manage Apple Subscription</h5>
+                                <p class="fs-xs text-muted mb-3">To review, update, or cancel auto-renewal for Smart Ledger Pro:</p>
+                                <a href="https://apps.apple.com/account/subscriptions" target="_blank" rel="noopener" class="btn btn-outline-primary btn-sm w-100 mb-2">
+                                    <i class="bx bx-link-external me-1"></i>Apple Subscriptions Portal
+                                </a>
+                                <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" class="btn btn-outline-secondary btn-sm w-100">
+                                    <i class="bx bx-link-external me-1"></i>Apple Standard EULA
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </section>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer dark-mode bg-dark pt-5 pb-4 pb-lg-5">
+        <div class="container pt-lg-4">
+            <div class="row pb-5">
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
+                        <img src="assets/img/logo_small.png" width="47" alt="SheikhSoft">
+                        <span class="text-white">SheikhSoft</span>
+                    </div>
+                    <p class="fs-sm text-muted pb-lg-2 mb-4">
+                        SheikhSoft is a premier software engineering studio and creator of <strong>Smart Ledger: AI Accounting</strong>. Delivering enterprise-grade financial management, double-entry bookkeeping, and offline-first intelligence.
+                    </p>
+                    <div class="d-flex">
+                        <a href="mailto:support@sheikhsoft.com" class="btn btn-icon btn-secondary btn-sm me-2" title="Email Support"><i class="bx bx-envelope"></i></a>
+                        <a href="https://sheikhsoft.com" class="btn btn-icon btn-secondary btn-sm me-2" title="Website"><i class="bx bx-globe"></i></a>
+                        <a href="tel:+8801937761214" class="btn btn-icon btn-secondary btn-sm me-2" title="Phone"><i class="bx bx-phone"></i></a>
+                    </div>
+                </div>
+                <div class="col-xl-6 col-lg-7 col-md-6 offset-xl-2 offset-lg-1">
+                    <div id="footer-links" class="row">
+                        <div class="col-sm-4 mb-4 mb-sm-0">
+                            <h6 class="mb-3 text-white">Company</h6>
+                            <ul class="nav flex-column mb-2 mb-lg-0">
+                                <li class="nav-item"><a href="index.html" class="nav-link px-0 py-1 text-muted">Home</a></li>
+                                <li class="nav-item"><a href="about.html" class="nav-link px-0 py-1 text-muted">About Us</a></li>
+                                <li class="nav-item"><a href="services.html" class="nav-link px-0 py-1 text-muted">Services</a></li>
+                                <li class="nav-item"><a href="contacts.html" class="nav-link px-0 py-1 text-muted">Contact Us</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4 mb-4 mb-sm-0">
+                            <h6 class="mb-3 text-white">Legal &amp; Compliance</h6>
+                            <ul class="nav flex-column mb-2 mb-lg-0">
+                                <li class="nav-item"><a href="privacy-policy.html" class="nav-link px-0 py-1 text-muted">Privacy Policy</a></li>
+                                <li class="nav-item"><a href="terms.html" class="nav-link px-0 py-1 text-muted">Terms of Service (EULA)</a></li>
+                                <li class="nav-item"><a href="delete-account.html" class="nav-link px-0 py-1 text-muted">Account Deletion</a></li>
+                                <li class="nav-item"><a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank" rel="noopener" class="nav-link px-0 py-1 text-muted">Apple Standard EULA <i class="bx bx-link-external fs-xs"></i></a></li>
+                            </ul>
+                        </div>
+                        <div class="col-sm-4">
+                            <h6 class="mb-3 text-white">Direct Support</h6>
+                            <p class="fs-sm text-muted mb-2">Technical &amp; Subscription Help:</p>
+                            <a href="mailto:support@sheikhsoft.com" class="text-primary fw-medium d-block mb-1">support@sheikhsoft.com</a>
+                            <a href="mailto:sheikhsoft.com@gmail.com" class="text-muted fs-sm d-block mb-2">sheikhsoft.com@gmail.com</a>
+                            <p class="fs-xs text-muted mb-0">Hotline: +880 1937761214</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-light border-opacity-10 pt-4 mt-2 d-md-flex align-items-center justify-content-between">
+                <p class="fs-xs text-muted mb-2 mb-md-0">&copy; 2026 SheikhSoft Inc. All rights reserved. Registered software publisher.</p>
+                <div class="fs-xs text-muted">
+                    <a href="privacy-policy.html" class="text-muted text-decoration-none me-3">Privacy</a>
+                    <a href="terms.html" class="text-muted text-decoration-none me-3">Terms &amp; EULA</a>
+                    <a href="delete-account.html" class="text-muted text-decoration-none">Delete Account</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+        <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+        <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+    <script src="assets/js/theme.min.js"></script>
+</body>
+</html>
